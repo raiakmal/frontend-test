@@ -7,7 +7,7 @@ export default function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
 
-  // ⛔ Redirect kalau user sudah login
+  // Redirect kalau user sudah login
   useEffect(() => {
     if (isAuthenticated()) {
       navigate("/dashboard");
