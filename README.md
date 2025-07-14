@@ -68,7 +68,7 @@ src/
 
 ```bash
 git clone https://github.com/username/frontend-test.git
-cd frontend-tes
+cd frontend-test
 ```
 
 ### 2. Install dependencies
