@@ -47,12 +47,16 @@ export default function UserTable() {
 
   return (
     <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg transition-all duration-300">
-      {/* Modal Konfirmasi */}
+      {/* Modal Konfirmasi Hapus Data */}
       {showConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 w-full max-w-sm mx-auto transition-all">
-            <h3 className="text-lg font-bold mb-3 text-gray-800 dark:text-gray-100">Konfirmasi Hapus</h3>
-            <p className="mb-6 text-gray-600 dark:text-gray-300">Apakah Anda yakin ingin menghapus user ini?</p>
+            <h3 className="text-lg font-bold mb-3 text-gray-800 dark:text-gray-100">
+              Konfirmasi Hapus
+            </h3>
+            <p className="mb-6 text-gray-600 dark:text-gray-300">
+              Apakah Anda yakin ingin menghapus user ini?
+            </p>
             <div className="flex gap-3">
               <button
                 onClick={confirmDelete}
@@ -71,11 +75,18 @@ export default function UserTable() {
         </div>
       )}
 
-      {/* ...existing code... */}
+      {/* Fitur Search */}
       <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
         <div className="relative w-full max-w-sm">
           <span className="absolute left-3 top-2.5 text-gray-400 dark:text-gray-500">
-            <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
@@ -90,13 +101,20 @@ export default function UserTable() {
         </div>
       </div>
 
+      {/* Tabel Data User */}
       <div className="overflow-x-auto">
         <table className="w-full border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
           <thead className="bg-gray-100 dark:bg-gray-700">
             <tr>
-              <th className="p-3 text-left font-semibold text-gray-700 dark:text-gray-100">Nama</th>
-              <th className="p-3 text-left font-semibold text-gray-700 dark:text-gray-100">Email</th>
-              <th className="p-3 text-center font-semibold text-gray-700 dark:text-gray-100">Aksi</th>
+              <th className="p-3 text-left font-semibold text-gray-700 dark:text-gray-100">
+                Nama
+              </th>
+              <th className="p-3 text-left font-semibold text-gray-700 dark:text-gray-100">
+                Email
+              </th>
+              <th className="p-3 text-center font-semibold text-gray-700 dark:text-gray-100">
+                Aksi
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -104,11 +122,17 @@ export default function UserTable() {
               <tr
                 key={user.id}
                 className={`border-t border-gray-200 dark:border-gray-700 ${
-                  idx % 2 === 0 ? "bg-gray-50 dark:bg-gray-800" : "bg-white dark:bg-gray-900"
+                  idx % 2 === 0
+                    ? "bg-gray-50 dark:bg-gray-800"
+                    : "bg-white dark:bg-gray-900"
                 } hover:bg-blue-50 dark:hover:bg-blue-900 transition`}
               >
-                <td className="p-3 text-gray-700 dark:text-gray-100">{user.name}</td>
-                <td className="p-3 text-gray-700 dark:text-gray-100">{user.email}</td>
+                <td className="p-3 text-gray-700 dark:text-gray-100">
+                  {user.name}
+                </td>
+                <td className="p-3 text-gray-700 dark:text-gray-100">
+                  {user.email}
+                </td>
                 <td className="p-3 text-center flex justify-center gap-2">
                   <button
                     onClick={() => navigate(`/users/edit/${user.id}`)}
@@ -127,7 +151,10 @@ export default function UserTable() {
             ))}
             {paginated.length === 0 && (
               <tr>
-                <td colSpan="3" className="text-center text-gray-500 dark:text-gray-400 py-6">
+                <td
+                  colSpan="3"
+                  className="text-center text-gray-500 dark:text-gray-400 py-6"
+                >
                   Tidak ada data
                 </td>
               </tr>

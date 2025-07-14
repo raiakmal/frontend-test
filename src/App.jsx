@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import EditProfile from "./pages/EditProfile";
 import UserForm from "./pages/UserForm";
-import ProtectedRoute from "./components/ProtectedRoute";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -47,7 +47,7 @@ export default function App() {
           }
         />
 
-        {/* Catch-all (Fallback ke NotFound) */}
+        {/* Fallback ke NotFound */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

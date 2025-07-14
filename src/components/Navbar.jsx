@@ -80,7 +80,7 @@ export default function Navbar() {
         </h1>
 
         <div className="flex items-center gap-3 flex-wrap">
-          {/* Theme Dropdown */}
+          {/* Dropdown Tema */}
           <div className="relative" ref={themeDropdownRef}>
             <button
               onClick={() => setThemeDropdownOpen((prev) => !prev)}
@@ -163,6 +163,7 @@ export default function Navbar() {
                 </svg>
               </button>
 
+              {/* Dropdown Profile */}
               {dropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-2xl z-50 animate-fade-in">
                   <ul className="text-black dark:text-gray-100">
