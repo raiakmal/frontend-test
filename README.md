@@ -41,22 +41,24 @@ Password: @Rai12345
 
 ## 🗂️ Struktur Direktori
 
+```
 src/
 ├── App.jsx
 ├── main.jsx
 ├── components/
-│ ├── Navbar.jsx
-│ └── ProtectedRoute.jsx
+│   ├── Navbar.jsx
+│   └── ProtectedRoute.jsx
 ├── pages/
-│ ├── Login.jsx
-│ ├── Dashboard.jsx
-│ ├── EditProfile.jsx
-│ ├── UserForm.jsx
-│ └── NotFound.jsx
+│   ├── Login.jsx
+│   ├── Dashboard.jsx
+│   ├── EditProfile.jsx
+│   ├── UserForm.jsx
+│   └── NotFound.jsx
 ├── utils/
-│ ├── auth.js
-│ └── theme.js
+│   ├── auth.js
+│   └── theme.js
 └── assets/
+```
 
 ---
 
@@ -91,13 +93,13 @@ http://localhost:5173
 
 ### 🙋‍♂️ Pembuat
 
-Nama: Muhammad Rai Akmal
+Nama: **Muhammad Rai Akmal**  
 Domisili: Tasikmalaya, Jawa Barat
 
 ---
 
 ### 📬 Kontak
 
-✉️ Email: muhammadrai0504@gmail.com
-🌐 GitHub: https://github.com/raiakmal
-💼 LinkedIn: https://www.linkedin.com/in/muhammad-rai-akmal-4805aa1b2/
+- ✉️ Email: [muhammadrai0504@gmail.com](mailto:muhammadrai0504@gmail.com)
+- 🌐 GitHub: [https://github.com/raiakmal](https://github.com/raiakmal)
+- 💼 LinkedIn: [https://www.linkedin.com/in/muhammad-rai-akmal-4805aa1b2/](https://www.linkedin.com/in/muhammad-rai-akmal-4805aa1b2/)
