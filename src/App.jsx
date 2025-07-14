@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import EditProfile from "./pages/EditProfile";
 import UserForm from "./pages/UserForm";
 import ProtectedRoute from "./components/ProtectedRoute";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -46,8 +47,8 @@ export default function App() {
           }
         />
 
-        {/* Catch-all (Fallback ke Login) */}
-        <Route path="*" element={<Login />} />
+        {/* Catch-all (Fallback ke NotFound) */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

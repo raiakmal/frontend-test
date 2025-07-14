@@ -6,19 +6,23 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
-      <div className="p-6 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-4">Dashboard</h2>
+      <div className="p-4 sm:p-6 max-w-4xl mx-auto">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 sm:p-8 transition-all duration-300">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100 tracking-tight">
+            Dashboard
+          </h2>
 
-        <button
-          onClick={() => navigate("/users/add")}
-          className="mb-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        >
-          ➕ Tambah User Baru
-        </button>
+          <button
+            onClick={() => navigate("/users/add")}
+            className="mb-6 flex items-center gap-2 bg-green-600 hover:bg-green-700 focus:bg-green-700 text-white px-5 py-2.5 rounded-lg shadow-md transition-all duration-150 font-semibold focus:outline-none focus:ring-2 focus:ring-green-400"
+          >
+            + Tambah User Baru
+          </button>
 
-        <UserTable />
+          <UserTable />
+        </div>
       </div>
     </div>
   );
